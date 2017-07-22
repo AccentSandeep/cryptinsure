@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    ViewBag.BodyStyle = "#05a0b9";
+}
+
+<section class="crin_dashboard">
+    <div id="crin_container">
+        <div id="crin_containerIn">
+            <div class="inner">
+                <div class="crin-logo">
+                    <a href="/">
+                        <img src="~/Content/images/crypt_logo.png" alt="Cryptinsure" title="Cryptinsure" />
+                    </a>
+                </div>
+                <div class="crin_menu">
+                    <ul>
+                        <li>@Html.ActionLink("Dashboard", "index", "dashboard")</li>
+                        <li>
+                            @Html.ActionLink("Transactions", "index", "transactions")
+                            <ul>
+                                <li>@Html.ActionLink("Make transaction", "addnew", "transactions")</li>
+                            </ul>
+                        </li>
+                        <li>
+                            @Html.ActionLink("Claims", "index", "claims")
+                            <ul>
+                                <li>@Html.ActionLink("Add claim", "addnew", "claims")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var marginSize = $("#crin_containerIn").height();
+	$("#crin_container").css("opacity","1");
+	$("#crin_container").css("margin-top", -marginSize / 2);
+
+	$(window).on("resize", function(){
+	    $("#crin_container").css("margin-top", -marginSize / 2);
+	})
+</script>

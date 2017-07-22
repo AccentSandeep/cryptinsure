@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Create transaction";
+}
+@model Cryptinsure.ViewModels.TransactionViewModel
+@Html.Partial("_header")
+<section class="crin_transactions">
+    <div class="inner">
+        <div class="crin_cnt_box">
+            <div class="crin_header">
+                <h1>Crete new transaction</h1>
+            </div>
+            <div class="crin_cnt_context">
+                @using (Html.BeginForm("addnew", "transactions", null, FormMethod.Post, new { id = "addNewTransaction", autocomplete = "off" }))
+                {
+                    <div class="fieldContainer">
+                        <div class="fieldBox">
+                            @Html.LabelFor(model => model.Amount)
+                            @Html.TextBoxFor(model => model.Amount, new { @class = "textField", @placeholder = "Please, type amout of transaction" })
+                            @Html.ValidationMessageFor(model => model.Amount)
+                        </div>
+                        <div class="fieldBox">
+                            @Html.LabelFor(model => model.Recipient)
+                            @Html.TextBoxFor(model => model.Recipient, new { @class = "textField", @placeholder = "Please, type the recipient wallet number" })
+                            @Html.ValidationMessageFor(model => model.Recipient)
+                        </div>
+                    </div>
+                    <div class="fieldContainer">
+                        <div class="fieldBox">
+                            <label class="cb">
+                                <span class="checkbox">@Html.CheckBoxFor(model => model.Insure, new { @class = "stCheckBox" })</span>
+                                <span class="label">I want to insure my transaction</span>
+                            </label>
+                            <span class="hint">Your transaction will be insured. Please read more about in terms and conditions</span>
+                        </div>
+                        <div class="fieldBox"></div>
+                    </div>
+                    <div class="fieldContainer btnContainer">
+                        <div class="fieldBox full">
+                            <input type="submit" class="crin-small-btn" value="Send transaction" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
