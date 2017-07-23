@@ -1,0 +1,26 @@
+﻿<header>
+    <div class="inner">
+        <div class="crin-logo">
+            <a href="/">
+                <img src="~/Content/images/crypt_logo.png" alt="Cryptinsure" title="Cryptinsure" />
+            </a>
+        </div>
+        <div class="crin_menu">
+            <ul>
+                <li>@Html.ActionLink("Dashboard", "index", "dashboard")</li>
+                <li>
+                    @Html.ActionLink("Transactions", "index", "transactions")
+                    <ul>
+                        <li>@Html.ActionLink("Make transaction", "addnew", "transactions")</li>
+                    </ul>
+                </li>
+                <li>
+                    @Html.ActionLink("Claims", "index", "claims")
+                    <ul>
+                        <li>@Html.ActionLink("Add claim", "addnew", "claims")</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+</div>
+</header>

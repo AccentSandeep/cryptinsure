@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Create a claim request";
+}
+@model Cryptinsure.ViewModels.ClaimViewModel
+@Html.Partial("_header")
+<section class="crin_transactions">
+    <div class="inner">
+        <div class="crin_cnt_box">
+            <div class="crin_header">
+                <h1>Create a claim request</h1>
+            </div>
+            <div class="crin_cnt_context">
+                @using (Html.BeginForm("addnew", "claims", null, FormMethod.Post, new { id = "addNewTransaction", autocomplete = "off" }))
+                {
+                    <div class="fieldContainer">
+                        <div class="fieldBox">
+                            @Html.LabelFor(model => model.TransactionWasMade)
+                            @Html.TextBoxFor(model => model.TransactionWasMade, new { @class = "textField", @placeholder = "Please, type a transaction ID" })
+                            @Html.ValidationMessageFor(model => model.TransactionWasMade)
+                        </div>
+                        <div class="fieldBox">
+                            @Html.LabelFor(model => model.IntendedAddress)
+                            @Html.TextBoxFor(model => model.IntendedAddress, new { @class = "textField", @placeholder = "Please, type intended address" })
+                            @Html.ValidationMessageFor(model => model.IntendedAddress)
+                        </div>
+                    </div>
+                    <div class="fieldContainer btnContainer">
+                        <div class="fieldBox full">
+                            <input type="submit" class="crin-small-btn" value="Create a claim" />
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

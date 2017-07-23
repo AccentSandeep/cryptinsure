@@ -1,0 +1,199 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+* {
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+.transition, .crin-dash .inner .crin_menu ul li a, header .inner .crin_menu ul li a, #crin_container #crin_containerIn .inner .crin_menu ul li a, .crin-dash .inner .crin_menu ul li a:hover, header .inner .crin_menu ul li a:hover, .crin-dash .inner .crin_menu ul li:hover ul, header .inner .crin_menu ul li:hover ul, .crin-dash .inner .crin_menu ul li ul, header .inner .crin_menu ul li ul, #crin_container #crin_containerIn .inner .crin_menu ul li ul {
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+
+.nomargin, body, html, .crin-dash .inner .crin_menu ul, header .inner .crin_menu ul, #crin_container #crin_containerIn .inner .crin_menu ul, .crin-dash .inner .crin_menu ul li:hover ul, header .inner .crin_menu ul li:hover ul {
+  margin: 0px;
+  padding: 0px; }
+
+.full, body, html, section.crin_dashboard {
+  width: 100%;
+  height: 100%; }
+
+.crinBody, .crin-dash .inner, header .inner, #crin_container #crin_containerIn .inner, section.crin_dashboard .inner, section.crin_transactions .inner, section.crin_claims .inner {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px; }
+
+.table, .fieldContainer, .fieldContainer .fieldBox label.cb span {
+  display: table;
+  width: 100%; }
+
+.tableCell, .fieldContainer .fieldBox, .fieldContainer .fieldBox label.cb span.checkbox, .fieldContainer .fieldBox label.cb span.label {
+  display: table-cell;
+  width: 50%; }
+  .tableCell.middle, .fieldContainer .middle.fieldBox, .fieldContainer .fieldBox label.cb span.checkbox, .fieldContainer .fieldBox label.cb span.label {
+    vertical-align: middle; }
+  .tableCell.top, .fieldContainer .fieldBox, .fieldContainer .fieldBox label.cb span.top.checkbox, .fieldContainer .fieldBox label.cb span.top.label {
+    vertical-align: top; }
+
+.crin-dash .inner, header .inner, #crin_container #crin_containerIn .inner {
+  padding: 25px 0 0 0; }
+  .crin-dash .inner .crin-logo, header .inner .crin-logo, #crin_container #crin_containerIn .inner .crin-logo {
+    display: table;
+    width: 100%; }
+    .crin-dash .inner .crin-logo a, header .inner .crin-logo a, #crin_container #crin_containerIn .inner .crin-logo a {
+      display: table;
+      margin: 0 auto; }
+  .crin-dash .inner .crin_menu, header .inner .crin_menu, #crin_container #crin_containerIn .inner .crin_menu {
+    display: table;
+    margin: 15px auto 0 auto; }
+    .crin-dash .inner .crin_menu ul, header .inner .crin_menu ul, #crin_container #crin_containerIn .inner .crin_menu ul {
+      list-style: none; }
+      .crin-dash .inner .crin_menu ul li, header .inner .crin_menu ul li, #crin_container #crin_containerIn .inner .crin_menu ul li {
+        float: left;
+        margin: 0 5px; }
+        .crin-dash .inner .crin_menu ul li a, header .inner .crin_menu ul li a, #crin_container #crin_containerIn .inner .crin_menu ul li a {
+          padding: 5px 10px;
+          display: table;
+          width: 100%;
+          text-decoration: none;
+          background: #90b5bb;
+          font-family: "Open Sans", sans-serif;
+          font-size: 13px;
+          color: #fff; }
+          .crin-dash .inner .crin_menu ul li a:hover, header .inner .crin_menu ul li a:hover, #crin_container #crin_containerIn .inner .crin_menu ul li a:hover {
+            text-decoration: none;
+            background: #71888c; }
+        .crin-dash .inner .crin_menu ul li:hover ul, header .inner .crin_menu ul li:hover ul, #crin_container #crin_containerIn .inner .crin_menu ul li:hover ul {
+          display: table; }
+        .crin-dash .inner .crin_menu ul li ul, header .inner .crin_menu ul li ul, #crin_container #crin_containerIn .inner .crin_menu ul li ul {
+          position: absolute;
+          display: none; }
+          .crin-dash .inner .crin_menu ul li ul li, header .inner .crin_menu ul li ul li, #crin_container #crin_containerIn .inner .crin_menu ul li ul li {
+            margin: 0px; }
+
+header {
+  padding: 15px 10px 10px 10px;
+  height: 100px;
+  background: #05a0b9;
+  width: 100%; }
+  header .inner .crin-logo {
+    float: left;
+    width: auto; }
+  header .inner .crin_menu {
+    float: left;
+    width: auto;
+    margin: 5px 0 0 25px; }
+
+#crin_container {
+  position: relative;
+  opacity: 0;
+  top: 50%;
+  transition: all 1s;
+  -o-transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s; }
+  #crin_container #crin_containerIn {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px; }
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  color: #71888c;
+  font-size: 18px; }
+
+section.crin_transactions .inner {
+  margin: 20px auto 0 auto; }
+  section.crin_transactions .inner .crin_cnt_box {
+    background: #fbfbfb;
+    padding: 20px 30px; }
+section.crin_claims .inner {
+  margin: 20px auto 0 auto; }
+  section.crin_claims .inner .crin_cnt_box {
+    background: #fbfbfb;
+    padding: 20px 30px; }
+
+.fieldContainer {
+  margin: 0 0 15px 0; }
+  .fieldContainer .fieldBox {
+    padding: 0 10px; }
+    .fieldContainer .fieldBox label {
+      display: table;
+      padding: 10px 0;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      color: #000; }
+    .fieldContainer .fieldBox input[type=text].textField {
+      padding: 8px 10px;
+      width: 100%;
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      color: #000; }
+    .fieldContainer .fieldBox label.cb {
+      cursor: pointer;
+      padding: 0px; }
+      .fieldContainer .fieldBox label.cb span.checkbox {
+        width: auto; }
+      .fieldContainer .fieldBox label.cb span.label {
+        padding: 0 0 0 10px;
+        width: auto; }
+    .fieldContainer .fieldBox span.hint {
+      font-family: "Open Sans", sans-serif;
+      font-size: 11px; }
+    .fieldContainer .fieldBox span.field-validation-error {
+      display: table;
+      padding: 10px 5px 0 5px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      color: #ff0000; }
+    .fieldContainer .fieldBox.full, .fieldContainer body.fieldBox, .fieldContainer html.fieldBox, .fieldContainer section.fieldBox.crin_dashboard {
+      width: 100%; }
+  .fieldContainer.btnContainer {
+    margin: 30px 0 0 0; }
+
+.crin-small-btn {
+  padding: 10px 25px;
+  background: #30b6cc;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  color: #fff;
+  border: 0px; }
+  .crin-small-btn:hover {
+    cursor: pointer;
+    background: #05a0b9; }
+
+.stCheckBox {
+  display: table;
+  margin: 3px 0;
+  width: 28px;
+  height: 28px; }
+  .stCheckBox::after {
+    cursor: pointer;
+    display: table;
+    content: '\f00c';
+    font-family: FontAwesome;
+    color: transparent;
+    width: 28px;
+    height: 28px;
+    line-height: 20px;
+    vertical-align: middle;
+    background: white;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box; }
+  .stCheckBox:checked::after {
+    background: #30b6cc;
+    border: 0 none;
+    color: white;
+    padding: 4px 4px 4px 4px;
+    text-align: center; }
+  .stCheckBox:focus {
+    border: 1px solid #30b6cc;
+    outline: none; }
+
+/*# sourceMappingURL=style.css.map */

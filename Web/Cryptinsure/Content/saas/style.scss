@@ -1,0 +1,329 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600);
+
+$font: 'Open Sans', sans-serif;
+$font-size: 13px;
+$font-color: #000;
+
+$bg-color:#05a0b9;
+$button-color:#30b6cc;
+$main-color:#30b6cc;
+
+* {
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.transition{
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.nomargin{
+    margin:0px;
+    padding:0px;
+}
+
+.full{
+    width:100%;
+    height:100%;
+}
+
+.crinBody{
+    display:table;
+    margin:0 auto;
+    width:100%;
+    max-width:1100px;
+}
+
+.table{
+    display:table;
+    width:100%;
+}
+.tableCell{
+    display:table-cell;
+    width:50%;
+    &.middle{
+        vertical-align:middle;
+    }
+    &.top{
+        vertical-align:top;
+    }
+}
+
+body, html{
+    @extend .nomargin;
+    @extend .full;
+}
+
+
+.crin-dash{
+     .inner{
+        @extend .crinBody;
+        padding:25px 0 0 0;
+        .crin-logo{
+            display:table;
+            width:100%;
+            a{
+                display:table;
+                margin:0 auto;
+            }
+        }
+        .crin_menu{
+            display:table;
+            margin:15px auto 0 auto;
+            ul{
+                @extend .nomargin;
+                list-style:none;
+                li{
+                    float:left;
+                    margin:0 5px;
+                    a{
+                        padding:5px 10px;
+                        display:table;
+                        width:100%;
+                        text-decoration:none;
+                        background:#90b5bb;
+                        font-family:$font;
+                        font-size:$font-size;
+                        color:#fff;
+                        @extend .transition;
+                        &:hover{
+                            text-decoration:none;
+                            background:#71888c;
+                            @extend .transition;
+                        }
+                    }
+                    &:hover{
+                        ul{
+                            display:table;
+                            @extend .nomargin;
+                            @extend .transition;
+                        }
+                    }
+                    ul{
+                        position:absolute;
+                        display:none;
+                        @extend .transition;
+                        li{
+                            margin:0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+header{
+    padding:15px 10px 10px 10px;
+    height:100px;
+    background:$bg-color;
+    width:100%;
+    @extend .crin-dash;
+
+    .inner{
+        .crin-logo{
+            float:left;
+            width:auto;
+        }
+        .crin_menu{
+            float:left;
+            width:auto;
+            margin:5px 0 0 25px;
+        }
+    }
+
+}
+
+#crin_container{
+	position:relative;
+	opacity:0;
+	top:50%;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+    #crin_containerIn{
+	    display:block;
+	    margin:0 auto;
+	    width:100%;
+	    max-width:500px;
+        @extend .crin-dash;
+    }
+}
+
+h1{
+    font-family:$font;
+    color:#71888c;
+    font-size: 18px;
+}
+
+section{
+    &.crin_dashboard{
+        @extend .full;
+        .inner{
+            @extend .crinBody;
+            .crin_banner{}
+            .crin_modules{}
+        }
+    }
+
+    &.crin_transactions{
+        .inner{
+            @extend .crinBody;
+            margin:20px auto 0 auto;
+            .crin_cnt_box{
+                background:#fbfbfb;
+                padding:20px 30px;
+                .crin_header{
+                    h1{
+
+                    }
+                }
+                .crin_cnt_context{
+
+                }
+            }
+        }
+    }
+    &.crin_claims{
+        .inner{
+            @extend .crinBody;
+            margin:20px auto 0 auto;
+            .crin_cnt_box{
+                background:#fbfbfb;
+                padding:20px 30px;
+                .crin_header{
+                    h1{
+
+                    }
+                }
+                .crin_cnt_context{
+
+                }
+            }
+        }
+    }
+}
+
+.fieldContainer{
+    @extend .table;
+    margin:0 0 15px 0;
+    .fieldBox{
+        @extend .tableCell;
+        @extend .tableCell.top;
+        padding:0 10px;
+        label{
+            display:table;
+            padding:10px 0;
+            font-family:$font;
+            font-size:13px;
+            color:#000;
+        }
+        input[type=text]{
+            &.textField{
+                padding:8px 10px;
+                width:100%;
+                font-family:$font;
+                font-size:12px;
+                color:$font-color;
+            }
+        }
+        
+        label{
+            &.cb{
+                cursor:pointer;
+                padding:0px;
+                span{
+                    @extend .table;
+                    &.checkbox{
+                        @extend .tableCell;
+                        @extend .tableCell.middle;
+                        width:auto;
+                    }
+                    &.label{
+                        padding:0 0 0 10px;
+                        @extend .tableCell;
+                        @extend .tableCell.middle;
+                        width:auto;
+                    }
+                }
+            }
+        }
+
+        span{
+            &.hint{
+                font-family:$font;
+                font-size:11px;
+            }
+            &.field-validation-error{
+                display:table;
+                padding:10px 5px 0 5px;
+                font-family:$font;
+                font-size:12px;
+                color:#ff0000;
+            }
+        }
+
+        &.full{
+            width:100%;
+        }
+    }
+    &.btnContainer{
+        margin:30px 0 0 0;
+    }
+}
+
+.crin-small-btn{
+    padding: 10px 25px;
+    background:$button-color;
+    font-family:$font;
+    font-size:13px;
+    color:#fff;
+    border:0px;
+    &:hover{
+        cursor:pointer;
+        background:$bg-color;
+    }
+}
+
+.stCheckBox{
+    display:table;
+    margin:3px 0;
+    width:28px;
+    height:28px;
+    &::after{
+        cursor:pointer;
+        display:table;
+        content: '\f00c';
+        font-family: FontAwesome;
+        color: transparent;
+        width: 28px;
+        height: 28px;
+        line-height:20px;
+        vertical-align: middle;
+        background: white;
+        border: 1px solid #cccccc;
+        box-sizing:border-box;
+        -o-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+    }
+    &:checked{
+        &::after{
+            background: $main-color;
+            border: 0 none;
+            color: white;
+            padding: 4px 4px 4px 4px;
+            text-align: center;
+        }
+    }
+    &:focus{
+        border:1px solid $main-color;
+        outline: none;
+    }   
+}
